@@ -1,4 +1,4 @@
-import { SignedOut, SignInButton} from "@clerk/nextjs";
+import {SignedIn, SignedOut, SignIn, SignInButton, UserButton} from "@clerk/nextjs";
 import {Button} from "@/components/ui/button";
 
 export default function Home() {
@@ -9,6 +9,14 @@ export default function Home() {
                <Button>Login</Button>
            </SignInButton>
        </SignedOut>
+
+       <SignedIn>
+           <UserButton/>
+       </SignedIn>
+
+       <Button variant={"secondary"}>
+           Click Me
+       </Button>
    </div>
   );
 }
